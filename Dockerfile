@@ -25,6 +25,7 @@ FROM 	alpine
 
 COPY 	--from=builder /root/json_exporter /usr/bin
 VOLUME	["/config"]
-EXPOSE 	7979
+ENV 	EXPORTER_PORT=7979
+ENV		EXPORTER_SCRAPE_INTERVAL_SEC=60
 
-CMD 	json_exporter $URL /config/config.yml
+CMD 	json_exporter --port $EXPORTER_PORT --interval $EXPORTER_SCRAPE_INTERVAL_SEC $EXPORTER_URL $EXPORTER_CONFIG
