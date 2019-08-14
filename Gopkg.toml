@@ -1,0 +1,27 @@
+[[constraint]]
+  name = "github.com/Sirupsen/logrus"
+  version = "1.4.2"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/kawamuray/jsonpath"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/kawamuray/prometheus-exporter-harness"
+
+[[constraint]]
+  name = "github.com/prometheus/client_golang"
+  version = "0.9.4"
+
+[[constraint]]
+  name = "github.com/urfave/cli"
+  version = "1.21.0"
+
+[[constraint]]
+  name = "gopkg.in/yaml.v2"
+  version = "2.2.2"
+
+[prune]
+  go-tests = true
+  unused-packages = true
